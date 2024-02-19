@@ -1,0 +1,10 @@
+{
+	"Print to console": {
+		"scope": "java",
+		"prefix": "bsexcelSheetColumnTitle",
+		"body": [
+			"public static  String convert(int columnNumber) {String sb =\"\";while(columnNumber>0){columnNumber--;int rem=columnNumber%26;char c=(char)(rem + 'A');sb=c+sb;columnNumber=columnNumber/26;} return sb;}"
+		],
+		"description": "A -> 1 \n B -> 2 \n Z -> 2 \n AA -> 27 "
+	}
+}

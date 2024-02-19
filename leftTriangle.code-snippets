@@ -1,0 +1,11 @@
+{
+
+	"Print to console": {
+		"scope": "java",
+		"prefix": "bsleftTriangle",
+		"body": [
+			"public static void leftTriangle(int k) {int a, b;for (a = 0; a < k; a++) { for (b = 2 * (k - a); b >= 0; b--)System.out.print(' '); for (b = 0; b <= a; b++) System.out.print( '*'); System.out.println();} }"
+		],
+		"description": "Log output to console"
+	}
+}

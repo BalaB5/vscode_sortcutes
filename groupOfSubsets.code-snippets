@@ -1,0 +1,11 @@
+{
+
+	"Print to console": {
+		"scope": "java",
+		"prefix": "bsgroupSubsets",
+		"body": [
+			"public static List<List<Integer>> subsets(int[] num) {List<List<Integer>> out = new ArrayList<>();if (num == null || num.length == 0)return out;out.add(new ArrayList<>());for (int i = 0; i < num.length; i++) {for (int j = 0; j < out.size(); j++) {List<Integer> temp = new ArrayList<>(out.get(j));temp.add(num[i]);out.add(temp);}}out.remove(0);return out;}"
+		],
+		"description": " i/p =[1,2,3] \n [ [3], [1],[2], [1,3],[2,3],[1,2],[1,2,3],]"
+	}
+}

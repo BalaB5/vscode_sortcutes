@@ -1,0 +1,10 @@
+{
+	"Print to console": {
+		"scope": "java",
+		"prefix": "bsgroupAnagrams",
+		"body": [
+			" public static void groupAnagrams(String arr[]) {HashMap<String, ArrayList<String>> map = new HashMap<>();for (int i = 0; i < arr.length; i++) {String word = arr[i];char[] temp = word.toCharArray();Arrays.sort(temp);String key = new String(temp);if (map.containsKey(key))map.get(key).add(word);else {ArrayList<String> wordsList = new ArrayList<>();wordsList.add(word);map.put(key, wordsList);}}for (String s : map.keySet()) {ArrayList<String> values = map.get(s);if (values.size() > 0)System.out.print(values);}}"
+		],
+		"description": "i/p ['eat','tea','tan','ate','nat','bat'] \n O/p[eat, tea, ate][bat][tan, nat]"
+	}
+}

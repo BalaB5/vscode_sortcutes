@@ -1,0 +1,11 @@
+{
+
+	"Print to console": {
+		"scope": "java",
+		"prefix": "bshappyNumber",
+		"body": [
+			"public static boolean isHappy(int n) {Set<Integer> set = new HashSet<>();int res = 0;while (set.add(n)) {if (n == 1)return true;while (n > 0) {int d = n % 10;res += d * d;n /= 10;}n = res;res = 0;}return false;}"
+		],
+		"description": "19 is a happy number \n 1^2 + 9^2 = 82 \n 8^2 + 2^2 = 68 \n 6^2 + 8^2 = 100 \n 1^2 + 0^2 + 0^2 = 1"
+	}
+}

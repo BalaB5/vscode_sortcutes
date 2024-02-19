@@ -1,0 +1,10 @@
+{
+	"Print to console": {
+		"scope": "java",
+		"prefix": "bsspiralMatrix",
+		"body": [
+			" public static int[][] generateMatrix(int n) {  int[][] result = new int[n][n];int left = 0, right = n - 1; int top = 0, bottom = n - 1; int count = 1; while (left <= right && top <= bottom) { /* top */ for (int col = left; col <= right; col++) { result[top][col] = count++; } top++;/* right */  for (int row = top; row <= bottom; row++) {result[row][right] = count++;} right--;/* bottom */for (int col = right; col >= left; col--) {result[bottom][col] = count++;}  bottom--;/* left */for (int row = bottom; row >= top; row--) { result[row][left] = count++; } left++;  } return result; }"
+		],
+		"description": "Log output to console"
+	}
+}

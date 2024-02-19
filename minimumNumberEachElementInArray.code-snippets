@@ -1,0 +1,11 @@
+{
+
+	"Print to console": {
+		"scope": "java",
+		"prefix": "bsminimumNumberEachElementInArray",
+		"body": [
+			" public static String[] formate(int[] arr) {String[] tempArr = new String[arr.length];for (int i = 0; i < arr.length; i++) {int temp = Integer.MAX_VALUE;for (int j = 0; j < arr.length; j++) {if (arr[i] < arr[j] && temp > arr[j]) {temp = arr[j];}}tempArr[i] = arr[i] + \">\" + (temp == Integer.MAX_VALUE ? \" \" : temp);}return tempArr;}"
+		],
+		"description": "2>3,3>5,7>8,1>2,8>11,5>7,11>"
+	}
+}

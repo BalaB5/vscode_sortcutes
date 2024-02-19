@@ -1,0 +1,11 @@
+{
+
+	"Print to console": {
+		"scope": "java",
+		"prefix": "bsreverseStringWithoutSapce",
+		"body": [
+			"public static String reverse(String text) {Stack<Character> list = new Stack<Character>();StringBuilder reWord = new StringBuilder();for (int i = 0; i < text.length(); i++) {if (text.charAt(i) > 96 && text.charAt(i) < 123 || text.charAt(i) > 64 && text.charAt(i) < 91)list.push(text.charAt(i));  } for (int i = 0; i < text.length(); i++) {  if (!(text.charAt(i) > 64 && text.charAt(i) < 91 || text.charAt(i) > 96 && text.charAt(i) < 123)) reWord.append(text.charAt(i));  else reWord.append(list.pop());} return reWord.toString(); }"
+		],
+		"description": "Log output to console"
+	}
+}

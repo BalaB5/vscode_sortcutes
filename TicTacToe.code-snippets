@@ -1,0 +1,13 @@
+{
+
+	"Print to console": {
+		"scope": "java",
+		"prefix": "bsticTacToe",
+		"body": [
+			"public static void gameStart() { Scanner inp = new Scanner(System.in);int[][] box = new int[3][3];int counter = 9;int mark = -1;int player = -1;boolean status = false;while (counter > 0) {if (counter % 2 == 1)player = mark = 1;else player = mark = 2;System.out.print(\"Player\" + player + \"Enter (1-9) : \");int pos = inp.nextInt() - 1;if (pos < 0 && pos > 9) {System.out.println(\"Invalid retrying\");continue;}if (box[pos / 3][pos % 3] == 0) {box[pos / 3][pos % 3] = mark;if (checkWin(box, mark)) {display(box);System.out.println(player + \" wins\");status = true;}if (status) {break;}} else {System.out.println(\"Not a valid one, retrying\");continue;}display(box);counter--;}if (!status)System.out.println(\"Position is draw !\");}",
+			"private static void display(int[][] box) {for (int i = 0; i < 3; i++) {for (int j = 0; j < 3; j++)System.out.print(box[i][j] + \" \");System.out.println();}}"
+		    "private static boolean checkWin(int[][] box, int player) {for (int i = 0; i < 3; i++)if (box[i][0] == player && box[i][1] == player && box[i][2] == player)return true;for (int i = 0; i < 3; i++)if (box[0][i] == player && box[1][i] == player && box[2][i] == player)return true;if (box[0][0] == player && box[1][1] == player && box[2][2] == player)return true;if (box[0][2] == player && box[1][1] == player && box[2][0] == player)return true;return false;}"
+	],
+		"description": ""
+	}
+}

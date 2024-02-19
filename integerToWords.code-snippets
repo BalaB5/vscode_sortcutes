@@ -1,0 +1,12 @@
+{
+
+	"Print to console": {
+		"scope": "java",
+		"prefix": "bsintegerToWords",
+		"body": [
+			"public static String toWords(int num) {if (num == 0)return \"Zero\";return convert(num);}",
+			"private static String convert(int num) {String[] blw10 = { \"\", \"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\" };String[] blw20 = { \"Ten\", \"Eleven\", \"Twelve\", \"Thirteen\", \"Fourteen\", \"Fifteen\", \"Sixteen\", \"Seventeen\",\"Eighteen\", \"Nineteen\" };String[] blw100 = { \"\", \"Ten\", \"Twenty\", \"Thirty\", \"Forty\", \"Fifty\", \"Sixty\", \"Seventy\", \"Eighty\", \"Ninety\" };String result = new String(); if (num < 10)result = blw10[num]; else if (num < 20) result = blw20[num - 10]; else if (num < 100) result = blw100[num / 10] + \" \" + convert(num % 10);else if (num < 1000) result = convert(num / 100) + \" Hundred \" + convert(num % 100); else if (num < 1000000) result = convert(num / 1000) + \" Thousand \" + convert(num % 1000); else if (num < 1000000000) result = convert(num / 1000000) + \" Million \" + convert(num % 1000000);else result = convert(num / 1000000000) + \" Billion \" + convert(num % 1000000000);return result.trim();}"
+		],
+		"description": "Input: num = 123 \n Output: 'One Hundred Twenty Three'"
+	}
+}

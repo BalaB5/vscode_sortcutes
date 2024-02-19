@@ -1,0 +1,11 @@
+{
+	
+	"Print to console": {
+		"scope": "java",
+		"prefix": "bscontainWater",
+		"body": [
+			" public static int maxArea(int[] arr) {int water = 0, l = 0, r = arr.length - 1;while (l < r) {int minA = (arr[l] < arr[r] ? arr[l] : arr[r]); minA *= (r - l); water = water > minA ? water : minA;if (arr[l] > arr[r]) r--;  else l++; }return water;}"
+		],
+		"description": " "
+	}
+}

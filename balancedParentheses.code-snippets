@@ -1,0 +1,14 @@
+{
+	
+	"Print to console": {
+		"scope": "java",
+		"prefix": "bsbalancedParentheses",
+		"body": [
+			" private static String removeUnbalancedParentheses(String word) {Stack<Integer> list = new Stack<>();StringBuilder result = new StringBuilder();for (int i = 0; i < word.length(); i++) {char ch = word.charAt(i);if (ch == '(')list.push(i);else if (ch == ')') {if (!list.isEmpty())list.pop();else  continue;}result.append(ch);}while (!list.isEmpty()) {int index = list.pop();result.deleteCharAt(index);}return result.toString();}"
+		],
+		"description": "Input: ((abc)((de))	
+		Output: (abc)((de))
+		Input: (((ab)
+		Output: (ab)"
+	}
+}
